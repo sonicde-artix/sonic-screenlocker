@@ -1,0 +1,64 @@
+---
+version: 6.6.3-1
+pkgbase:
+  name: sonic-screenlocker
+  pkgdesc: Library and components for Sonic-DE secure lock screen architecture
+  pkgver: 6.6.3
+  pkgrel: 1
+  url: https://github.com/Sonic-DE/sonic-screenlocker
+  arch:
+    - x86_64
+  groups:
+    - sonicde
+  license:
+    - LGPL-2.0-or-later
+  makedepends:
+    - extra-cmake-modules
+    - kcmutils
+    - kdoctools
+  depends:
+    - gcc-libs
+    - glibc
+    - kconfig
+    - kcoreaddons
+    - kcrash
+    - kdeclarative
+    - kglobalaccel
+    - ki18n
+    - kidletime
+    - kio
+    - kirigami
+    - knotifications
+    - kpackage
+    - ksvg
+    - kwindowsystem
+    - kxmlgui
+    - layer-shell-qt
+    - sonic-screen-library
+    - libx11
+    - libxcb
+    - libxi
+    - pam
+    - libplasma
+    - qt6-base
+    - qt6-declarative
+    - xcb-util-keysyms
+  optdepends:
+    - 'kcmutils: configuration module'
+  provides:
+    - kscreenlocker
+  conflicts:
+    - kscreenlocker
+  source:
+    - sonic-screenlocker-6.6.3.tar.gz::https://github.com/Sonic-DE/sonic-screenlocker/archive/refs/tags/6.6.3.tar.gz
+    - kde.pam
+    - kde-fingerprint.pam
+    - kde-smartcard.pam
+  sha256sums:
+    - a118fd937516d4a31650eebc9c3799b09c89ca6f2e2bca28acdbf8c121ac7e88
+    - adba7bb7c27eb3a572e5e9d3cea0dbeebe59d3634472d1863d14fe892cb13b2b
+    - 32734b4e1ec8b7f7e32b6cb2d68285c5c4f15f53736bba085096e76095181241
+    - 5d9c31cbf66e8e455b9559c929f184efd598f714743d5a1e6ce20adb44dc4b2d
+pkgname:
+  - name: sonic-screenlocker
+# generated with artixpkg 0.38.2-1-any
