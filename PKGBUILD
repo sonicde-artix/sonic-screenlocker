@@ -3,7 +3,7 @@
 pkgname=sonic-screenlocker
 pkgver=6.6.3
 _dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=1
+pkgrel=2
 pkgdesc='Library and components for Sonic-DE secure lock screen architecture'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screenlocker'
@@ -14,7 +14,6 @@ depends=(gcc-libs
          kcoreaddons
          kcrash
          kdeclarative
-         kglobalaccel
          ki18n
          kidletime
          kio
@@ -24,7 +23,6 @@ depends=(gcc-libs
          ksvg
          kwindowsystem
          kxmlgui
-         layer-shell-qt
          sonic-screen-library
          libx11
          libxcb
@@ -33,7 +31,7 @@ depends=(gcc-libs
          libplasma
          qt6-base
          qt6-declarative
-         #wayland
+         sonic-frameworks-keybind
          xcb-util-keysyms)
 makedepends=(extra-cmake-modules
              kcmutils
