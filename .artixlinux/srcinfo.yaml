@@ -1,10 +1,10 @@
 ---
-version: 6.6.3-3
+version: 6.6.3-4
 pkgbase:
   name: sonic-screenlocker
   pkgdesc: Library and components for Sonic-DE secure lock screen architecture
   pkgver: 6.6.3
-  pkgrel: 3
+  pkgrel: 4
   url: https://github.com/Sonic-DE/sonic-screenlocker
   arch:
     - x86_64
@@ -33,7 +33,7 @@ pkgbase:
     - kwindowsystem
     - kxmlgui
     - layer-shell-qt
-    - sonic-screen-library
+    - libplasma
     - libx11
     - libxcb
     - libxi
@@ -41,7 +41,7 @@ pkgbase:
     - qt6-base
     - qt6-declarative
     - sonic-frameworks-keybind
-    - sonic-interface-libraries
+    - sonic-screen-library
     - xcb-util-keysyms
   optdepends:
     - 'kcmutils: configuration module'
