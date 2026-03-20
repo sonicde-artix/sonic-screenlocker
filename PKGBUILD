@@ -23,6 +23,7 @@ depends=(gcc-libs
          ksvg
          kwindowsystem
          kxmlgui
+         layer-shell-qt
          sonic-screen-library
          libx11
          libxcb
