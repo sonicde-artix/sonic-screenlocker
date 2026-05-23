@@ -1,30 +1,27 @@
-# Maintainer: artist for Sonic-DE
+# Maintainer: artist for Artix Linux
 
 pkgname=sonic-screenlocker
-pkgver=6.6.3
-_dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=4
-pkgdesc='Library and components for Sonic-DE secure lock screen architecture'
+pkgver=6.6.5
+pkgrel=1
+_commit="db1878f38118a504d8c052d79c07e4bb5ba11b47"
+pkgdesc='Library and components for Artix Linux secure lock screen architecture'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screenlocker'
 license=(LGPL-2.0-or-later)
-depends=(gcc-libs
-         glibc
+depends=(glibc
          kconfig
-         kcoreaddons
+         sonic-frameworks-core-addons
          kcrash
          kdeclarative
          ki18n
          kidletime
-         kio
-         kirigami
+         sonic-frameworks-io
+         sonic-frameworks-quick-ui
          knotifications
          kpackage
          ksvg
-         kwindowsystem
          kxmlgui
-         layer-shell-qt
-         libplasma
+         libgcc
          libx11
          libxcb
          libxi
@@ -32,7 +29,8 @@ depends=(gcc-libs
          qt6-base
          qt6-declarative
          sonic-frameworks-keybind
-         #sonic-interface-libraries
+         sonic-frameworks-windowsystem
+         sonic-interface-libraries
          sonic-screen-library
          xcb-util-keysyms)
 makedepends=(extra-cmake-modules
@@ -42,7 +40,8 @@ optdepends=('kcmutils: configuration module')
 groups=(sonicde)
 conflicts=(kscreenlocker)
 provides=(kscreenlocker)
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${_dirver}.tar.gz"
+makedepends+=(git)
+source=("$pkgname-$pkgver::git+$url.git#commit=$_commit"
         kde.pam
         kde-fingerprint.pam 
         kde-smartcard.pam)
@@ -62,7 +61,8 @@ package() {
   install -Dm644 "$srcdir"/kde-smartcard.pam "$pkgdir"/usr/lib/pam.d/kde-smartcard
 }
 
-sha256sums=('a118fd937516d4a31650eebc9c3799b09c89ca6f2e2bca28acdbf8c121ac7e88'
+sha256sums=('d3fccc0f1a271296dd4afcb8787f9519000cbbb1c1b196bba5364cca06066545'
             'adba7bb7c27eb3a572e5e9d3cea0dbeebe59d3634472d1863d14fe892cb13b2b'
             '32734b4e1ec8b7f7e32b6cb2d68285c5c4f15f53736bba085096e76095181241'
             '5d9c31cbf66e8e455b9559c929f184efd598f714743d5a1e6ce20adb44dc4b2d')
+
