@@ -3,7 +3,7 @@
 
 pkgname=sonic-screenlocker
 pkgver=6.6.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Library and components for Artix Linux secure lock screen architecture'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screenlocker'
