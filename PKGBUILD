@@ -40,7 +40,7 @@ optdepends=('kcmutils: configuration module')
 groups=(sonicde)
 conflicts=(kscreenlocker)
 provides=(kscreenlocker)
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
         kde.pam
         kde-fingerprint.pam
         kde-smartcard.pam)
