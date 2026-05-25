@@ -2,8 +2,8 @@
 # Contributor: artist <artist@artixlinux.org>
 
 pkgname=sonic-screenlocker
-pkgver=6.6.5
-pkgrel=2
+pkgver=6.6.5.2
+pkgrel=1
 pkgdesc='Library and components for Artix Linux secure lock screen architecture'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-screenlocker'
